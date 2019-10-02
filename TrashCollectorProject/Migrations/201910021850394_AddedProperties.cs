@@ -3,7 +3,7 @@ namespace TrashCollectorProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class AddedProperties : DbMigration
     {
         public override void Up()
         {
@@ -12,6 +12,13 @@ namespace TrashCollectorProject.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        firstName = c.String(),
+                        lastName = c.String(),
+                        streetAddress = c.String(),
+                        city = c.String(),
+                        state = c.String(),
+                        zipCode = c.String(),
+                        balance = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -20,6 +27,9 @@ namespace TrashCollectorProject.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        firstName = c.String(),
+                        lastName = c.String(),
+                        zipCode = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

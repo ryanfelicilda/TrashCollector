@@ -36,8 +36,8 @@ namespace TrashCollectorProject.Models
         [Display(Name = "Extra Pickup Date")]
         public string extraPickupDate { get; set; }
 
-        [Display(Name = "Pickup Date")]
-        public string oneTimePickupDate { get; set; }
+        [Display(Name = "Pickup Day")]
+        public string PickupDay { get; set; }
 
         [Display(Name = "Suspend Pickup Date")]
         public string suspendPickupDate { get; set; }
@@ -46,6 +46,5 @@ namespace TrashCollectorProject.Models
         [ForeignKey("ApplicationUser")]
         public string ApplicationId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
-        public enum DayOfWeek { };
     }
 }

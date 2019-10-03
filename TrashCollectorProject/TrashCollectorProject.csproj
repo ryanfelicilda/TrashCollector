@@ -183,6 +183,14 @@
     <Compile Include="Migrations\201910031332109_AddedPropertiesAndForeignKeys.Designer.cs">
       <DependentUpon>201910031332109_AddedPropertiesAndForeignKeys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.cs" />
+    <Compile Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.Designer.cs">
+      <DependentUpon>201910031413403_AddedPropertyInAccountViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031509329_RemoveProperty.cs" />
+    <Compile Include="Migrations\201910031509329_RemoveProperty.Designer.cs">
+      <DependentUpon>201910031509329_RemoveProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -281,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910031332109_AddedPropertiesAndForeignKeys.resx">
       <DependentUpon>201910031332109_AddedPropertiesAndForeignKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.resx">
+      <DependentUpon>201910031413403_AddedPropertyInAccountViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031509329_RemoveProperty.resx">
+      <DependentUpon>201910031509329_RemoveProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

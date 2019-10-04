@@ -11,6 +11,33 @@
     <h4>Employees</h4>
     <hr />
     <dl class="dl-horizontal">
+        [Display(Name = "First Name")]
+        public string firstName { get; set; }
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        [Display(Name = "Last Name")]
+        public string lastName { get; set; }
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        [Display(Name = "Zip Code")]
+        public string zipCode { get; set; }
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
     </dl>
 
     @using (Html.BeginForm()) {

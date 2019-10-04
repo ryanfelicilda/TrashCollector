@@ -10,8 +10,6 @@
     <h4>Employees</h4>
     <hr />
     <dl class="dl-horizontal">
-        [Display(Name = "First Name")]
-        public string firstName { get; set; }
         <dt>
             @Html.DisplayNameFor(model => model.firstName)
         </dt>
@@ -19,8 +17,6 @@
         <dd>
             @Html.DisplayFor(model => model.firstName)
         </dd>
-        [Display(Name = "Last Name")]
-        public string lastName { get; set; }
         <dt>
             @Html.DisplayNameFor(model => model.lastName)
         </dt>
@@ -28,8 +24,6 @@
         <dd>
             @Html.DisplayFor(model => model.lastName)
         </dd>
-        [Display(Name = "Zip Code")]
-        public string zipCode { get; set; }
         <dt>
             @Html.DisplayNameFor(model => model.zipCode)
         </dt>

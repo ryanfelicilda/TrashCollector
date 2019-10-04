@@ -65,7 +65,6 @@ namespace TrashCollectorProject.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
         [Display(Name = "User Roles")]
         public string UserRoles { get; set; }
 

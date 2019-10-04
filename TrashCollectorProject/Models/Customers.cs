@@ -37,7 +37,7 @@ namespace TrashCollectorProject.Models
         public string extraPickupDate { get; set; }
 
         [Display(Name = "Pickup Day")]
-        public string PickupDay { get; set; }
+        public string pickupDay { get; set; }
 
         [Display(Name = "Suspend Pickup Date")]
         public string suspendPickupDate { get; set; }

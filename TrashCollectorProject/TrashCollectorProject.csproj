@@ -175,29 +175,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910021850394_AddedProperties.cs" />
-    <Compile Include="Migrations\201910021850394_AddedProperties.Designer.cs">
-      <DependentUpon>201910021850394_AddedProperties.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910031332109_AddedPropertiesAndForeignKeys.cs" />
-    <Compile Include="Migrations\201910031332109_AddedPropertiesAndForeignKeys.Designer.cs">
-      <DependentUpon>201910031332109_AddedPropertiesAndForeignKeys.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.cs" />
-    <Compile Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.Designer.cs">
-      <DependentUpon>201910031413403_AddedPropertyInAccountViewModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910031509329_RemoveProperty.cs" />
-    <Compile Include="Migrations\201910031509329_RemoveProperty.Designer.cs">
-      <DependentUpon>201910031509329_RemoveProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910041210268_ChangePickupProperty.cs" />
-    <Compile Include="Migrations\201910041210268_ChangePickupProperty.Designer.cs">
-      <DependentUpon>201910041210268_ChangePickupProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910041424548_ChangeDataTypeForBalance.cs" />
-    <Compile Include="Migrations\201910041424548_ChangeDataTypeForBalance.Designer.cs">
-      <DependentUpon>201910041424548_ChangeDataTypeForBalance.cs</DependentUpon>
+    <Compile Include="Migrations\201910061638249_Initial.cs" />
+    <Compile Include="Migrations\201910061638249_Initial.Designer.cs">
+      <DependentUpon>201910061638249_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -292,23 +272,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910021850394_AddedProperties.resx">
-      <DependentUpon>201910021850394_AddedProperties.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910031332109_AddedPropertiesAndForeignKeys.resx">
-      <DependentUpon>201910031332109_AddedPropertiesAndForeignKeys.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910031413403_AddedPropertyInAccountViewModel.resx">
-      <DependentUpon>201910031413403_AddedPropertyInAccountViewModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910031509329_RemoveProperty.resx">
-      <DependentUpon>201910031509329_RemoveProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910041210268_ChangePickupProperty.resx">
-      <DependentUpon>201910041210268_ChangePickupProperty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910041424548_ChangeDataTypeForBalance.resx">
-      <DependentUpon>201910041424548_ChangeDataTypeForBalance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910061638249_Initial.resx">
+      <DependentUpon>201910061638249_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

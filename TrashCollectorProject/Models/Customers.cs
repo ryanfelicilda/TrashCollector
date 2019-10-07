@@ -34,16 +34,17 @@ namespace TrashCollectorProject.Models
         public double balance { get; set; }
 
         [Display(Name = "Start Date for Pick-up")]
-        public string StartDay { get; set; }
+        public string startPickupDate { get; set; }
 
         [Display(Name = "Pickup Day (Ex. Monday)")]
         public string pickupDay { get; set; }
 
         [Display(Name = "End Date Pickup Date")]
-        public string suspendPickupDate { get; set; }
+        public string endPickupDate { get; set; }
 
         [Display(Name = "Extra Pickup Date")]
         public string extraPickupDate { get; set; }
+
         public bool confirmPickup { get; set; }
 
         

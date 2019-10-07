@@ -49,7 +49,6 @@ namespace TrashCollectorProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(employees);
         }
 
@@ -112,7 +111,6 @@ namespace TrashCollectorProject.Controllers
             customerConfirmation.confirmPickup = true;
             db.SaveChanges();
             return RedirectToAction("Index", "Employee");
-
         }
         protected override void Dispose(bool disposing)
         {

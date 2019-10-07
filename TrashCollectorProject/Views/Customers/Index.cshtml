@@ -33,13 +33,19 @@
             @Html.DisplayNameFor(model => model.balance)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.extraPickupDate)
+            @Html.DisplayNameFor(model => model.startPickupDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.pickupDay)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.suspendPickupDate)
+            @Html.DisplayNameFor(model => model.endPickupDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.extraPickupDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.confirmPickup)
         </th>
         <th></th>
     </tr>
@@ -68,13 +74,19 @@
         @Html.DisplayFor(modelItem => item.balance)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.extraPickupDate)
+        @Html.DisplayFor(modelItem => item.startPickupDate)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.pickupDay)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.suspendPickupDate)
+        @Html.DisplayFor(modelItem => item.endPickupDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.extraPickupDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.confirmPickup)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

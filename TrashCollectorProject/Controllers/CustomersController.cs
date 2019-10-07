@@ -78,9 +78,10 @@ namespace TrashCollectorProject.Controllers
                 customerEdit.state = customers.state;
                 customerEdit.zipCode = customers.zipCode;
                 customerEdit.balance = customers.balance;
-                customerEdit.extraPickupDate = customers.extraPickupDate;
+                customerEdit.startPickupDate = customers.startPickupDate;
                 customerEdit.pickupDay = customers.pickupDay;
                 customerEdit.endPickupDate = customers.endPickupDate;
+                customerEdit.extraPickupDate = customers.extraPickupDate;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

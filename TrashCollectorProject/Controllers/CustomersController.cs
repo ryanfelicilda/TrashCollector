@@ -80,7 +80,7 @@ namespace TrashCollectorProject.Controllers
                 customerEdit.balance = customers.balance;
                 customerEdit.extraPickupDate = customers.extraPickupDate;
                 customerEdit.pickupDay = customers.pickupDay;
-                customerEdit.suspendPickupDate = customers.suspendPickupDate;
+                customerEdit.endPickupDate = customers.endPickupDate;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

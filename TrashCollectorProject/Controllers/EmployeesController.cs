@@ -24,22 +24,15 @@ namespace TrashCollectorProject.Controllers
         // GET: Employees/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employees employees = db.Employee.Find(id);
-            if (employees == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employees);
+            Employees employeeDetails = db.Employee.Where(e => e.Id == id).SingleOrDefault();
+            return View(employeeDetails);
         }
 
         // GET: Employees/Create
         public ActionResult Create()
         {
-            return View();
+            Employees employeeCreate = new Employees();
+            return View(employeeCreate);
         }
 
         // POST: Employees/Create
@@ -63,16 +56,8 @@ namespace TrashCollectorProject.Controllers
         // GET: Employees/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employees employees = db.Employee.Find(id);
-            if (employees == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employees);
+            Employees employeeEdit = db.Employee.Where(e => e.Id == id).SingleOrDefault();
+            return View(employeeEdit);
         }
 
         // POST: Employees/Edit/5
@@ -100,16 +85,8 @@ namespace TrashCollectorProject.Controllers
         // GET: Employees/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Employees employees = db.Employee.Find(id);
-            if (employees == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employees);
+            Employees employeeDelete = db.Employee.Where(e => e.Id == id).SingleOrDefault();
+            return View(employeeDelete);
         }
 
         // POST: Employees/Delete/5
@@ -122,7 +99,21 @@ namespace TrashCollectorProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Confirmation(int id)
+        {
+            Customers customerConfirmation = db.Customer.Where(c => c.Id == id).SingleOrDefault();
+            return View(customerConfirmation);
+        }
+        [HttpPost]
+        public ActionResult Confirmation(Customers customer)
+        {
+            var customerConfirmation = db.Customer.Find(customer.Id);
+            customerConfirmation.balance += 5.50;
+            customerConfirmation.confirmPickup = true;
+            db.SaveChanges();
+            return RedirectToAction("Index", "Employee");
 
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

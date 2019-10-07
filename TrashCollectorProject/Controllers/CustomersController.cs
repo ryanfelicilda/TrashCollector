@@ -25,22 +25,15 @@ namespace TrashCollectorProject.Controllers
         // GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customers customers = db.Customer.Find(id);
-            if (customers == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customers);
+            Customers customerDetails = db.Customer.Where(c => c.Id == id).SingleOrDefault();
+            return View(customerDetails);
         }
 
         // GET: Customers/Create
         public ActionResult Create()
         {
-            return View();
+            Customers customerCreate = new Customers();
+            return View(customerCreate);
         }
 
         // POST: Customers/Create
@@ -64,16 +57,8 @@ namespace TrashCollectorProject.Controllers
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customers customers = db.Customer.Find(id);
-            if (customers == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customers);
+            Customers customerEdit = db.Customer.Where(c => c.Id == id).SingleOrDefault();
+            return View(customerEdit);
         }
 
         // POST: Customers/Edit/5
@@ -108,16 +93,8 @@ namespace TrashCollectorProject.Controllers
         // GET: Customers/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customers customers = db.Customer.Find(id);
-            if (customers == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customers);
+            Customers customerDelete = db.Customer.Where(c => c.Id == id).SingleOrDefault();
+            return View(customerDelete);
         }
 
         // POST: Customers/Delete/5

@@ -18,7 +18,8 @@ namespace TrashCollectorProject.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View(db.Employee.ToList());
+            var currentUser = User.Identity.GetUserId();
+            return View(db.Employee.Where(e => e.ApplicationId == currentUser));
         }
 
         // GET: Employees/Details/5
@@ -97,20 +98,6 @@ namespace TrashCollectorProject.Controllers
             db.Employee.Remove(employees);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-        public ActionResult Confirmation(int id)
-        {
-            Customers customerConfirmation = db.Customer.Where(c => c.Id == id).SingleOrDefault();
-            return View(customerConfirmation);
-        }
-        [HttpPost]
-        public ActionResult Confirmation(Customers customer)
-        {
-            var customerConfirmation = db.Customer.Find(customer.Id);
-            customerConfirmation.balance += 5.50;
-            customerConfirmation.confirmPickup = true;
-            db.SaveChanges();
-            return RedirectToAction("Index", "Employee");
         }
         protected override void Dispose(bool disposing)
         {
